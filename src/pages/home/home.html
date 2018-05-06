@@ -6,9 +6,13 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding  class="card-background-page">
+  <button ion-button (click)="takePhoto()" full color="primary">Take photo</button>
+  <button ion-button (click)="chooseImage()" full color="secondary">Pick photo from gallery</button>
+  <button ion-button (click)="cropImage()" full color="danger">Crop Image</button>
+    <ion-card>
+      <img [src]=path style="height: 15em"/>
+      <div class="card-title">Image path:</div>
+      <div class="card-subtitle">{{ path }}</div>
+    </ion-card>
 </ion-content>
